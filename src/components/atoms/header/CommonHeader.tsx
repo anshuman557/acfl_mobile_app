@@ -6,6 +6,7 @@ import {
   TextStyle,
   Text,
   TouchableOpacity,
+  ImageSourcePropType,
 } from 'react-native';
 import {colors} from '../../../library/styles/colors';
 import {fonts} from '../../../library/styles/fonts';
@@ -17,16 +18,17 @@ interface iProps {
   onPress?: () => void;
   text?: string;
   textstyle?: TextStyle;
+  Icon:any;
 }
 
-const CommonHeader = ({onPress, text, textstyle}: iProps) => {
+const CommonHeader = ({onPress, text, textstyle,Icon}: iProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContent}>
         <Image style={styles.icon} source={imagePath.appLogo} />
 
         <TouchableOpacity onPress={onPress} style={styles.iconWrapper}>
-          <UserCircle2 color={colors.black} size={30} />
+         {Icon}
         </TouchableOpacity>
       </View>
 

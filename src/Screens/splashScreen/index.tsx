@@ -1,13 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { navigationStrings } from "../../navigation/navigationStrings";
 
 const Splash = () => {
     const navigation = useNavigation<any>()
   useEffect(() => {
     setTimeout(() => {
-        navigation.replace("Home"); 
-    }, 3000); 
+        navigation.replace(navigationStrings.Onboarding); 
+    }, 1500); 
   }, []);
 
   return (
