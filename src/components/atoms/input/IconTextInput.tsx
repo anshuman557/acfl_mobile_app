@@ -10,7 +10,7 @@ import {
   View,
   ViewStyle,
 } from "react-native";
-import CountryFlag from "react-native-country-flag";
+// import CountryFlag from "react-native-country-flag";
 import Feather from "react-native-vector-icons/Feather";
 import { colors } from "../../../library/styles/colors";
 import { fonts } from "../../../library/styles/fonts";
@@ -18,10 +18,10 @@ import { globalStyleDefinitions } from "../../../library/styles/globalStyleDefin
 import { getScaledFontSize } from "../../../library/utils/globalFunctions";
 
 interface iProps {
-  placeholder: string;
+  placeholder?: string;
   text?: string;
   value: string;
-  onChangeText: (val: string) => any;
+  onChangeText?: (val: string) => any;
   multiline?: boolean;
   customStyle?: ViewStyle;
   caretHidden?: boolean;
@@ -71,10 +71,10 @@ const IconTextInput = ({
   return (
     <View
       key={`textInput ${placeholder}`}
-      style={[
-        { marginTop: globalStyleDefinitions.commonItemsMargin.margin },
-        customStyle,
-      ]}
+      // style={[
+      //   { marginTop: globalStyleDefinitions.commonItemsMargin.margin },
+      //   customStyle,
+      // ]}
       onStartShouldSetResponder={onPress}
     >
       {text && (
@@ -90,7 +90,7 @@ const IconTextInput = ({
             onPress={showCountryPicker}
             style={styles.countryPickerContainer}
           >
-            <CountryFlag isoCode={countryCode?.code} size={30} />
+            {/* <CountryFlag isoCode={countryCode?.code} size={30} /> */}
           </TouchableOpacity>
           <Text style={styles.countryCodeText}>{countryCode?.dial_code}</Text>
           <TextInput
@@ -197,13 +197,11 @@ const styles = StyleSheet.create({
   secureInputContainer: {
     borderRadius: 8,
     backgroundColor: colors.white,
-    height: 48,
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1,
+    // borderWidth: 1,
     borderColor: colors.secondaryBorder,
     overflow: "hidden",
-    paddingHorizontal: 10,
   },
   countryPickerContainer: {
     alignItems: "center",
@@ -224,13 +222,11 @@ const styles = StyleSheet.create({
   textStyle: {
     fontFamily: fonts.fontRegular,
     color: colors.black,
-    fontSize: getScaledFontSize(14),
-    backgroundColor: colors.white,
+    fontSize: getScaledFontSize(12),
+    backgroundColor: colors.disableText,
     flex: 1,
-    lineHeight: getScaledFontSize(16),
-    height: 48,
-    textAlignVertical: "center",
-    paddingVertical: 0,
+    padding: 10,
+    borderRadius:20
   },
   multilineTextInput: {
     fontFamily: fonts.fontRegular,

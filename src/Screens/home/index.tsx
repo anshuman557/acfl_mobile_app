@@ -9,6 +9,7 @@ import imagePath from '../../library/constants/imagePath';
 import iconPath from '../../library/constants/iconPath';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {navigationStrings} from '../../navigation/navigationStrings';
+import { User, UserCircle2 } from 'lucide-react-native';
 
 const Home = () => {
   const navigation = useNavigation<NavigationProp<any>>();
@@ -17,7 +18,7 @@ const Home = () => {
   };
   return (
     <View style={styles.mainContainer}>
-      <CommonHeader text="Hello, Anshuman Singh!" onPress={onPress} />
+      <CommonHeader text="Hello, Anshuman Singh!" onPress={onPress} Icon={<UserCircle2 color={colors.black} size={30}/>} />
 
       <View style={styles.innerCard}>
         <View style={styles.docCard}>
