@@ -7,14 +7,14 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import commonStyles from '../../library/styles/commonStyles';
-import CommonHeader from '../../components/atoms/header/CommonHeader';
+import commonStyles from '../../../library/styles/commonStyles';
+import CommonHeader from '../../../components/atoms/header/CommonHeader';
 import {Home} from 'lucide-react-native';
-import {colors} from '../../library/styles/colors';
+import {colors} from '../../../library/styles/colors';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {getScaledFontSize} from '../../library/utils/globalFunctions';
-import imagePath from '../../library/constants/imagePath';
-import IconTextInput from '../../components/atoms/input/IconTextInput';
+import {getScaledFontSize} from '../../../library/utils/globalFunctions';
+import imagePath from '../../../library/constants/imagePath';
+import IconTextInput from '../../../components/atoms/input/IconTextInput';
 const DATA = [
   {
     title: 'FirstName',

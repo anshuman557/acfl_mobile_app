@@ -1,9 +1,9 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import commonStyles from '../../library/styles/commonStyles';
-import imagePath from '../../library/constants/imagePath';
-import {getScaledFontSize} from '../../library/utils/globalFunctions';
-import {colors} from '../../library/styles/colors';
+import commonStyles from '../../../library/styles/commonStyles';
+import imagePath from '../../../library/constants/imagePath';
+import {getScaledFontSize} from '../../../library/utils/globalFunctions';
+import {colors} from '../../../library/styles/colors';
 
 const Onboarding = () => {
   return (

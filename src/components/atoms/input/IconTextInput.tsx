@@ -38,9 +38,12 @@ interface iProps {
   maxLength?: number;
   rightIcon?: ImageSourcePropType;
   onRightIconPress?: () => void;
+  placeholderTextColor?:string;
+  
 }
 
 const IconTextInput = ({
+  placeholderTextColor,
   placeholder,
   text,
   value,
@@ -106,6 +109,7 @@ const IconTextInput = ({
             multiline={multiline}
             numberOfLines={multiline ? 4 : 1}
             maxLength={maxLength}
+          
           />
         </View>
       ) : secureEntry ? (
@@ -154,7 +158,7 @@ const IconTextInput = ({
             textAlign={textAlign || "left"}
             onChangeText={onChangeText}
             placeholder={placeholder}
-            placeholderTextColor={colors.secondaryText1}
+            placeholderTextColor={colors.black}
             caretHidden={caretHidden}
             secureTextEntry={isSecured}
             keyboardType={isNumber ? "number-pad" : "default"}

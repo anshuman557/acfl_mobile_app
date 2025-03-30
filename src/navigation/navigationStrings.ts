@@ -3,6 +3,8 @@
   Home:string;
   UserDetails:string;
   Onboarding:string;
+  MobileLogIN:string;
+  BorrowersInfo:string;
 };
 
 export const navigationStrings: NavigationStrings = {
@@ -10,5 +12,7 @@ export const navigationStrings: NavigationStrings = {
   Home:'Home',
   UserDetails:'UserDetails',
   Onboarding:'Onboarding',
+  MobileLogIN:"MobileLogIn",
+  BorrowersInfo:'BorrowersInfo'
  
 };
