@@ -1,15 +1,15 @@
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import commonStyles from '../../library/styles/commonStyles';
-import CommonHeader from '../../components/atoms/header/CommonHeader';
-import {colors} from '../../library/styles/colors';
-import {getScaledFontSize} from '../../library/utils/globalFunctions';
-import {fonts} from '../../library/styles/fonts';
-import imagePath from '../../library/constants/imagePath';
-import iconPath from '../../library/constants/iconPath';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {navigationStrings} from '../../navigation/navigationStrings';
 import { User, UserCircle2 } from 'lucide-react-native';
+import { navigationStrings } from '../../../navigation/navigationStrings';
+import CommonHeader from '../../../components/atoms/header/CommonHeader';
+import iconPath from '../../../library/constants/iconPath';
+import { getScaledFontSize } from '../../../library/utils/globalFunctions';
+import { colors } from '../../../library/styles/colors';
+import commonStyles from '../../../library/styles/commonStyles';
+import imagePath from '../../../library/constants/imagePath';
+import { fonts } from '../../../library/styles/fonts';
 
 const Home = () => {
   const navigation = useNavigation<NavigationProp<any>>();
@@ -33,7 +33,8 @@ const Home = () => {
           <Text style={styles.ViewText}>View</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.addButton} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.addButton} activeOpacity={0.7}
+        onPress={()=>navigation.navigate(navigationStrings.BorrowersInfo)}>
           <Text style={styles.addText}>Create Application</Text>
         </TouchableOpacity>
 
